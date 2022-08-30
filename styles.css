@@ -38,9 +38,16 @@ body {
   line-height: 80%;
 }
 
-#titleBanner h1.tp6 {
-	color: black;
+#titleBanner h1.tp {
+	font-size: 250%;
 }
+
+#titleBanner h1.black {
+	color: #000000;
+	text-shadow: 0px 8px 8px #ffffff;
+}
+
+
 
 /* make the 3 recipe columns display using a flexbox method */
 #recipeColumns {
@@ -56,6 +63,19 @@ body {
 #recipeColumns div#ingredients { flex-basis: 28%; }
 #recipeColumns div#equipment { flex-basis: 20%; }
 #recipeColumns div#directions { flex-basis: 50%; }
+
+/* hide the columns at first */
+#recipeColumns #ingredients ul,
+#recipeColumns #equipment ul,
+#recipeColumns #directions ol { 
+	display: none;
+}
+
+#recipeColumns #ingredients.tpShow ul,
+#recipeColumns #equipment.tpShow ul,
+#recipeColumns #directions.tpShow ol {
+	display: block;
+}
 
 /* reduce the left-hand padding of the list items */
 #recipeColumns ul,
